@@ -1,0 +1,118 @@
+package com.yura.pav;
+
+public class Cat {
+    private String name;
+    private String color;
+    private int age;
+    private double weight;
+    char sex;
+
+    public Cat() {
+
+    }
+
+    public Cat(String name, String color, int age, double weight, char sex) {
+        this.name = name;
+        this.color = color;
+        this.age = age;
+        this.weight = weight;
+        this.sex = sex;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public char getSex() {
+        return sex;
+    }
+
+    public void setSex(char sex) {
+        this.sex = sex;
+    }
+
+    public void voice() {
+        System.out.println("Мяу");
+    }
+
+    public void jump() {
+        System.out.println("Прыг скок");
+    }
+
+    public void scratch() {
+        System.out.println("scratch");
+    }
+
+    public void roll() {
+        System.out.println("rolling");
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                ", sex=" + sex +
+                '}';
+    }
+}
+package com.yura.pav;
+
+import java.io.CharArrayReader;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Cat musya = new Cat("Murzik", "Ginger", 2, 4.5, 'W');
+
+        System.out.println(musya);
+
+        musya.setAge(3);
+        musya.setColor("Grey");
+        musya.setName("Musya");
+        musya.setWeight(3.5);
+
+        System.out.println(musya.getAge());
+        System.out.println(musya.getColor());
+        System.out.println(musya.getName());
+        System.out.println(musya.getWeight());
+        System.out.println();
+
+        musya.voice();
+        musya.jump();
+        musya.roll();
+        musya.scratch();
+
+    }
+}
