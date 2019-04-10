@@ -1,0 +1,53 @@
+package com.yura.pav;
+
+public class Circle extends Shape {
+
+    private Point r;
+    private Point centre;
+
+    public Circle(Point r, Point centre) {
+        this.r = r;
+        this.centre = centre;
+    }
+
+    public Circle() {
+        super();
+    }
+
+    public Point getR() {
+        return r;
+    }
+
+    public void setR(Point r) {
+        this.r = r;
+    }
+
+    public Point getPoint() {
+        return centre;
+    }
+
+    public void setPoint(Point centre) {
+        this.centre = centre;
+    }
+
+
+    @Override
+
+    public double getPerimetr() {
+        return 2 * Math.PI * Point.length(r, centre);
+
+    }
+
+    @Override
+    double getArea() {
+        return Math.PI * Math.pow(Point.length(r, centre), 2);
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "r=" + r +
+                ", centerPoint=" + centre +
+                '}';
+    }
+}
