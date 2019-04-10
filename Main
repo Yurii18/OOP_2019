@@ -1,0 +1,26 @@
+package com.yura.pav;
+
+public class Main1 {
+
+    public static void main(String[] args) {
+        Circle circ = new Circle(new Point(0.0, 2.0), new Point(4.0, 5.0));
+
+        System.out.println(circ);
+        System.out.println(circ.getPerimetr());
+        System.out.println(circ.getArea());
+
+        Triangle tg = new Triangle(new Point(2, 4), new Point(-2.0, 5.0), new Point(-1.0, -6.0));
+
+        System.out.println(tg);
+        System.out.println(tg.getPerimetr());
+        System.out.println(tg.getArea());
+
+        Rectangle rect = new Rectangle(new Point(2, 4), new Point(-2.0, 5.0),
+                new Point(-1.0, -6.0), new Point(-1.0, -6.0)); //можно таким способом код переносить??
+
+        System.out.println(rect);
+        System.out.println(rect.getPerimetr());
+        System.out.println(rect.getArea());
+        
+    }
+}
